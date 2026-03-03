@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "ShowSearchForm";
+}
+<br />
+
+<style>
+    .forms {
+       margin: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center";
+    }
+</style>
+
+<table>
+    <tr>
+        <th>
+            <h4>Kërkoni të dhënat për një transaksion që keni dërguar:</h4>
+        </th>
+        <br />
+        <th>
+            <h4 style="margin-right:80px"></h4>
+        </th>
+        <th>
+            <h4>Kërkoni të dhënat për një transaksion që keni marr:</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <br />
+            <form asp-action="ShowSearchResults" method="post" class="forms">
+                <input type="text" name="search" placeholder="Kërko..." />
+                <button type="submit">Kërko</button>
+            </form>
+        </td>
+        <td></td>
+        <br />
+        <td>
+            <br />
+            <form asp-action="ShowSearchTerheqje" method="post" class="forms">
+                <input type="text" name="search" placeholder="Kërko..." />
+                <button type="submit">Kërko</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<br />
+

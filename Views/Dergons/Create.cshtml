@@ -1,0 +1,32 @@
+﻿@model Finance.Models.Dergon
+
+@{
+    ViewData["Title"] = "Dërgoni para";
+}
+
+<h2>Dërgoni para</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Emer"></label>
+        <input asp-for="Emer" class="form-control" />
+        <span asp-validation-for="Emer" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mbiemer"></label>
+        <input asp-for="Mbiemer" class="form-control" />
+        <span asp-validation-for="Mbiemer" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Datelindja"></label>
+        <input asp-for="Datelindja" type="date" class="form-control" />
+        <span asp-validation-for="Datelindja" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Shuma"></label>
+        <input asp-for="Shuma" type="number" class="form-control" />
+        <span asp-validation-for="Shuma" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Dërgo</button>
+</form>

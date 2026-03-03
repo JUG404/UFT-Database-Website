@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Finance.Models.Dergon>
+
+<h2>Rezultatet e Kërkimit</h2>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Emër</th>
+                <th>Mbiemër</th>
+                <th>Datëlindja</th>
+                <th>Shuma</th>
+                <th>Kodi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mbiemer)
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.Datelindja)
+             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shuma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kodi)
+            </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p><strong>Nuk u gjet asnjë rezultat për kërkimin tuaj.</strong></p>
+}

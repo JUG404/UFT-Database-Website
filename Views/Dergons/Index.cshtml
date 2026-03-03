@@ -1,0 +1,126 @@
+﻿@model IEnumerable<Finance.Models.Dergon>
+
+@{
+    ViewData["Title"] = "Dërgoni para";
+}
+
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 32px 60px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-size: 25px;
+        width:30%;
+    }
+
+    .button1 {
+        background-color: white;
+        color: #FCDD25;
+        border: 2px solid #FCDD25;
+    }
+
+        .button1:hover {
+            background-color: #FCDD25;
+            color: white;
+        }
+    .tb{
+        width: 100%;
+        background-color: #fff4c4;
+    }
+</style>
+<br />
+
+<table class="tb">
+    <tr>
+        <td width=100%>
+            <h5 style="text-align: center; font-size: 38px; margin-top:40px; font-weight: 400">SEND PAYMENT</h5>
+        </td>
+    </tr>
+</table>
+<table class="tb">
+    <tr>
+        <td>
+            <p style="padding: 0px 50px 0px 50px">
+                <br />
+                Union Bank ju mundëson të dërgoni dhe të merrni para, shpejt dhe në mënyrë të sigurt. Tashmë 
+                mund të përfitoni nga lehtësitë e shërbimit UB Online për të kryer transferta në çdo kohë, 24 orë 
+                në ditë dhe 7 ditë në javë.<br />
+                    <br />
+                – Brenda llogarive personale dhe klientëve të tjerë brenda banke aplikohet komisioni <br />
+                -50 Lek/ ekuivalente në valutë.<br />
+                – Përjashtohen veprimet valutore apo veprimet që nuk mund të kryhen nëpërmjet e-banking.<br />
+                    <br />
+                Plotësoni formularin Western Union “Dërgesë Parash”. Kontrolloni nëse informacioni në faturën
+            “dërgesë parash” është në rregull dhe më pas ju mund ta firmosni këtë dokument. Pasi të keni
+            dorëzuar shumën që do të dërgoni dhe faturën e firmosur, operatori do t’ju kthejë dokumentin tuaj
+            të identifkimit së bashku me faturën “dërgesë parash”, ku janë specifkuar 10 shifrat numrit të kontrollit
+            të transfertës së parave (MTCN) dhe shuma e dërguar.
+            </p>
+        </td>
+        <td style="padding: 15px 40px 20px 15px">
+            <img src="~/money.webp" height="300px">
+        </td>
+        </tr>
+</table>
+<table class="tb">
+    <tr>
+        <td style=" margin-left: 50px; margin: 50px; margin-bottom: 80px;">
+             
+            <div style="text-align:center; margin-top:10px;">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a asp-action="Create" class="button button1">DËRGO </a>
+                }
+                else
+                {
+                    <a asp-area="Identity" asp-page="/Account/Login" class="button button1">DËRGO</a>
+                }
+            </div>
+            <br />
+        </td>
+    </tr>
+</table>
+
+<table>
+<td>
+    <tr>
+                @if (Model != null && Model.Any())
+                {
+                    <h3 class="mt-4">Transaksionet tuaja</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Emër</th>
+                                <th>Mbiemër</th>
+                                <th>Datëlindja</th>
+                                <th>Shuma</th>
+                                <th>Kodi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Emer</td>
+                                    <td>@item.Mbiemer</td>
+                                    <td>@item.Datelindja.ToShortDateString()</td>
+                                    <td>@item.Shuma</td>
+                                    <td>@item.Kodi</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="mt-4">Nothing to see here...</p>
+                }
+
+</td>
+</tr>
+</table>

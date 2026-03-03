@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<style>
+    .nav {
+        background-color: #F2F2F2;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .box {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: #00050d;
+        border: 1px solid grey; 
+        margin: 3px;
+        padding: 5px;
+        display: flex;
+        align-items: center; 
+    }
+
+    hr.new5 {
+        border: 3px solid #FCDD25;
+    }
+    .nav, hr.new5 {
+        margin: 0; 
+        padding: 0;
+    }
+
+    .buttonn {
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        padding: 8px 18px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 550;
+    }
+
+    .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid white;
+    }
+    
+    .button2:hover {
+        background-color: #FCDD25;
+        color: white;
+    }
+</style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Finance</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Finance.styles.css" asp-append-version="true" />
+    <div class="nav">
+        <img src="~/location.png" height="20px" ; width="20px" ; style="float: left; margin-right: 2px; margin-left: 30px" >
+        <strong style="font-family: sans-serif; font-size: 13px; color; margin-right: 20px; margin-top: 5px;  font-weight: bold">Tirana, Albania</strong>
+
+        <img src="~/phone.png" height="15px" ; width="15px" ; style="float: left; margin-right: 5px; margin-top: 7px">
+        <strong style="font-family: sans-serif; font-size: 13px; color; margin-right: 20px; margin-top: 5px;  font-weight: bold">+355 42 234 979</strong>
+
+        <img src="~/mail.png" height="15px" ; width="18px" ; style="float: left; margin-right: 5px; margin-top: 7px">
+        <strong style="font-family: sans-serif; font-size: 13px; color; margin-right:850px; margin-top: 5px;  font-weight: bold"> info@uft.al</strong>
+
+        <img src="~/albania.png" height="22px" ; width="32px" ; style="float: left; margin-right: 5px">
+        <img src="~/english.png" height="20px" ; width="30px" ; style="float: left; margin-right: 5px">
+
+        <a href="https://www.facebook.com/unionnet.al/" target="_blank">
+            <img src="~/facebook.png" height="15px" ; width="12px" ; style="float: left; margin-right: 8px">
+        </a>
+
+        <a href="https://x.com/UnionNet_WU" target="_blank">
+            <img src="~/twitter.png" height="15px" ; width="15px" ; style="float: right; margin-right: 8px">
+        </a>
+
+        <a href="https://www.linkedin.com/company/unioni-financiar-tirana/" target="_blank">
+            <img src="~/linkedin.png" height="15px" ; width="15px" ; style="float: right; margin-right: 8px">
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCYeKKQQFdRSx9wn58bNbX2g" target="_blank">
+            <img src="~/youtube.png" height="15px" ; width="15px" ; style="float: right; margin-right: 8px">
+        </a> 
+
+        <a href="https://uft.al/" target="_blank">
+            <img src="~/mail2.png" height="15px" ; width="15px" ; style="float: right; margin-right: 8px; margin-top: 5px">
+        </a>
+
+        <a href="https://www.instagram.com/unionnet_westernunion/" target="_blank">
+            <img src="~/instagram.png" height="15px" ; width="15px" ; style="float: right; margin-top: 4px">
+        </a>
+    </div>
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+            <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+         <img src="~/union.png" height="40px" ; width="250px" ; style="float: right;  ">
+        </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1" ; style="font-weight: bold">
+                <li class="nav-item">
+                        <form class="nav-link text-dark" asp-area="" asp-controller="Merrets" asp-action="Index">
+                            <button class="buttonn button2">RECIVE PAYMENT</button> </form>
+                </li>
+                    <li class="nav-item">
+                        <form class="nav-link text-dark" asp-area="" asp-controller="Dergons" asp-action="Index">
+                            <button class="buttonn button2">SEND PAYMENT</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form class="nav-link text-dark" asp-area="" asp-controller="Transaksione" asp-action="ShowSearchForm">
+                            <button class="buttonn button2">TRANSACTIONS</button>
+                        </form>
+                    </li>
+                    <li class="nav-item" style=" margin-top: 17px; margin-left: 5px">
+                        <form asp-action="ShowSearchForm" asp-area="" method="post" asp-controller="Dergon">
+                            <input type="text" name="search" placeholder="Si mund t'ju ndihmojmë?" style="border-radius: 4px; padding-left: 7px">
+                            <button type="submit" style="background-color: #FCDD25; ">
+                                <img src="~/search.png" height="20px" ; width="20px">
+                        </button>
+                        
+                    </form>
+                </li>
+                    </ul>
+                    <partial name="_LoginPartial"/>
+                </div>
+            </div>
+        </nav>
+<hr class="new5">
+</body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Finance - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</html>

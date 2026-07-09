@@ -162,7 +162,11 @@ The project uses \*\*Entity Framework Core\*\* with \*\*SQL Server\*\* to store:
 
 
 
-!\[Homepage](images/UFT\_Homepage.png)
+!\[Homepage](images/UFT_Image_1.png)
+!\[Homepage](images/UFT_Image_2.png)
+!\[Homepage](images/UFT_Image_3.png)
+!\[Homepage](images/UFT_Image_4.png)
+
 
 ### 
 

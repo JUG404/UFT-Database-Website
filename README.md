@@ -160,16 +160,10 @@ The project uses \*\*Entity Framework Core\*\* with \*\*SQL Server\*\* to store:
 
 ### Screenshots
 
-
-
-!\[Homepage](images/UFT_Image_1.png)
-
-!\[Homepage](images/UFT_Image_2.png)
-
-!\[Homepage](images/UFT_Image_3.png)
-
-!\[Homepage](images/UFT_Image_4.png)
-
+![UFT_Image_1.png](./images/UFT_Image_1.png)
+![UFT_Image_2.png](./images/UFT_Image_2.png)
+![UFT_Image_3.png](./images/UFT_Image_3.png)
+![UFT_Image_4.png](./images/UFT_Image_4.png)
 
 ### 
 
